@@ -10,10 +10,12 @@ function MainPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex sm:flex-row gap-4 mb-4 bg-gray-400 rounded-full p-2">
+      <div className="flex sm:flex-row gap-2 mb-4 bg-gray-400 rounded-full p-1">
         <motion.button
-          className={`px-4 py-2 rounded-full ${
-            activeTab === "aboutme" ? "bg-gray-700 text-white" : "bg-gray-200"
+          className={`px-3 py-1 rounded-full ${
+            activeTab === "aboutme"
+              ? "bg-gray-700 text-white text-lg"
+              : "bg-gray-200"
           }`}
           onClick={() => setActiveTab("aboutme")}
           whileHover={{ scale: 1.05 }}
@@ -23,8 +25,10 @@ function MainPage() {
           About Me
         </motion.button>
         <motion.button
-          className={`px-4 py-2 rounded-full ${
-            activeTab === "contact" ? "bg-gray-700 text-white" : "bg-gray-200"
+          className={`px-3 py-1 rounded-full ${
+            activeTab === "contact"
+              ? "bg-gray-700 text-white text-2lg"
+              : "bg-gray-200"
           }`}
           onClick={() => setActiveTab("contact")}
           whileHover={{ scale: 1.05 }}
@@ -34,8 +38,10 @@ function MainPage() {
           Contact Me
         </motion.button>
         <motion.button
-          className={`px-4 py-2 rounded-full ${
-            activeTab === "projects" ? "bg-gray-700 text-white" : "bg-gray-200"
+          className={`px-3 py-1 rounded-full ${
+            activeTab === "projects"
+              ? "bg-gray-700 text-white text-2lg"
+              : "bg-gray-200"
           }`}
           onClick={() => setActiveTab("projects")}
           whileHover={{ scale: 1.05 }}

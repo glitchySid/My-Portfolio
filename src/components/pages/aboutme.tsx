@@ -1,10 +1,10 @@
 function Aboutme() {
   return (
     <div className="bg-black">
-      <h1 className="text-4xl sm:text-6xl font-bold text-center text-white m-4 sm:m-8">
+      <h1 className="text-4xl sm:text-6xl font-bold text-center text-white m-8 sm:m-8 font-serif">
         About Me
       </h1>
-      <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+      <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" />
       <h2 className="text-white m-10 text-lg">
         Hi 👋, I'm Siddhesh Mhatre, currently studying at Bharati Vidyapeeth DMS
         in India. I'm a passionate Backend Developer and Machine Learning
