@@ -1,9 +1,16 @@
 function Aboutme() {
   return (
     <div className="bg-black">
-      <h1 className="text-4xl sm:text-6xl font-bold text-center text-white m-8 sm:m-8 font-serif">
+      {/* <h1 className="text-4xl sm:text-6xl font-bold text-center text-white m-8 sm:m-8 font-serif">
         About Me
-      </h1>
+      </h1> */}
+      <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" />
+      <div className="flex justify-center">
+        <img
+          src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&width=435&lines=Machine+Learning+Enthusiast;Deep+Learning+Developer;Open+Source+Contributor;Always+Learning+New+Things"
+          className="flex justify-center"
+        />
+      </div>
       <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" />
       <h2 className="text-white m-10 text-lg">
         Hi 👋, I'm Siddhesh Mhatre, currently studying at Bharati Vidyapeeth DMS
