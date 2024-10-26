@@ -2,7 +2,7 @@ import { projects } from "../data/project";
 
 function Projects() {
   return (
-    <div className="flex justify-center">
+    <div className="flex flex-col md:flex-row flex-wrap gap-4 p-4">
       {projects.map((project, index) => (
         <a href={project.anchor} key={index}>
           <img src={project.img} alt={project.title} />

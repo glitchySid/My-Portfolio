@@ -8,7 +8,7 @@ function MainPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="inline-flex gap-4 mb-4 bg-gray-400 rounded-full p-2">
+      <div className="flex sm:flex-row gap-4 mb-4 bg-gray-400 rounded-full p-2">
         <button
           className={`px-4 py-2 rounded-full ${
             activeTab === "aboutme" ? "bg-gray-700 text-white" : "bg-gray-200"

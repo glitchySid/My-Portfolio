@@ -6,8 +6,7 @@ function ContactMe() {
           Let's Connect! 👋
         </h2>
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-4 sm:px-0">
           <div className="text-white">
             <h3 className="text-2xl font-semibold mb-4">Get in Touch 📧</h3>
             <p className="mb-4">
@@ -23,7 +22,7 @@ function ContactMe() {
             <img
               src="https://images.unsplash.com/photo-1516387938699-a93567ec168e"
               alt="Contact visual"
-              className="w-full h-48 object-cover rounded-lg"
+              className="w-full h-48 sm:h-64 object-cover rounded-lg"
             />
           </div>
         </div>
