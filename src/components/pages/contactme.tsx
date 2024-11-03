@@ -22,7 +22,7 @@ function ContactMe() {
             <img
               src="https://images.unsplash.com/photo-1516387938699-a93567ec168e"
               alt="Contact visual"
-              className="w-full h-48 sm:h-64 object-cover rounded-lg"
+              className="w-full h-48 sm:h-64 object-cover rounded-lg transform transition duration-300 hover:scale-105 active:scale-95"
             />
           </div>
         </div>
@@ -37,7 +37,7 @@ function ContactMe() {
               <img
                 src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
                 alt="Instagram"
-                className="w-8 h-8"
+                className="w-8 h-8 transform transition duration-300 hover:scale-110 active:scale-90"
               />
             </a>
             <a
@@ -47,7 +47,7 @@ function ContactMe() {
               <img
                 src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
                 alt="LinkedIn"
-                className="w-8 h-8"
+                className="w-8 h-8 transform transition duration-300 hover:scale-110 active:scale-90"
               />
             </a>
           </div>

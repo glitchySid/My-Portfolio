@@ -10,9 +10,8 @@ type ButtonProps = {
 const Button = ({ name, lable, setActiveTab, activeTab }: ButtonProps) => {
   return (
     <motion.button
-      className={`px-3 py-1 rounded-full text-center ${
-        activeTab === name ? "bg-gray-700 text-white" : "bg-gray-400"
-      }`}
+      className={`px-3 py-1 rounded-full text-center ${activeTab === name ? "bg-gray-700 text-white" : "bg-gray-400"
+        }`}
       onClick={() => setActiveTab(lable)}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
@@ -24,3 +23,4 @@ const Button = ({ name, lable, setActiveTab, activeTab }: ButtonProps) => {
 };
 
 export default Button;
+

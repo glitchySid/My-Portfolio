@@ -1,18 +1,36 @@
 import { projects } from "../data/project";
+import { motion } from "framer-motion";
 
 function Projects() {
   return (
-    <div className="flex flex-col md:flex-row flex-wrap gap-4 p-4 items-center justify-center">
-      {projects.map((project, index) => (
-        <a href={project.anchor} key={index}>
+<motion.div 
+  className="container mx-auto p-4"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  {projects.map((project, index) => (
+    <div key={index} className="flex flex-col md:flex-row gap-8 mb-12 items-center border border-white p-4 rounded-lg hover:border-gray-300">
+      {/* Image Container - Left side */}
+      <div className="w-full md:w-1/2">
+        <a href={project.anchor}>
           <img
             src={project.img}
             alt={project.title}
-            className="transition-transform duration-300 hover:scale-105"
+            className="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
           />
         </a>
-      ))}
+      </div>
+      
+      {/* Content Container - Right side */}
+      <div className="w-full md:w-1/2 space-y-4 border-white">
+        <h3 className="text-lg sm:text-xl font-bold text-white font-mono">{project.title}</h3>
+        <p className="text-white font-mono text-sm sm:text-base">{project.content}</p>
+        {/* Add any additional project details here */}
+      </div>
     </div>
+  ))}
+</motion.div>
   );
 }
 
