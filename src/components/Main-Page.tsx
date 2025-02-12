@@ -11,26 +11,26 @@ function MainPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex sm:flex-row gap-2 mb-4 bg-gray-400 rounded-full p-1 h-10">
+      <div className="flex sm:flex-row gap-2 mb-4 backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 rounded-full p-1 h-12 shadow-lg">
         <Button
-          name="About Me"
+          name="About"
           lable="aboutme"
           setActiveTab={setActiveTab}
           activeTab="aboutme"
         />
 
         <Button
-          name="Contact Me"
+          name="Contact"
           lable="contact"
           setActiveTab={setActiveTab}
-          activeTab="aboutme"
+          activeTab="contact"
         />
 
         <Button
           name="Projects"
           lable="projects"
           setActiveTab={setActiveTab}
-          activeTab="aboutme"
+          activeTab="projects"
         />
       </div>
 

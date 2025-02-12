@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 type ButtonProps = {
   name: string;
   lable: string;
@@ -9,18 +7,18 @@ type ButtonProps = {
 
 const Button = ({ name, lable, setActiveTab, activeTab }: ButtonProps) => {
   return (
-    <motion.button
-      className={`px-3 py-1 rounded-full text-center ${activeTab === name ? "bg-gray-700 text-white" : "bg-gray-400"
-        }`}
+    <button
       onClick={() => setActiveTab(lable)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 300 }}
+      className={`flex-1 px-4 py-1 rounded-full transition-all duration-300 text-sm font-medium text-white
+        ${
+          activeTab === lable
+            ? "bg-white/20 dark:bg-black/20 shadow-lg backdrop-blur-lg"
+            : "hover:bg-white/10 dark:hover:bg-black/10"
+        }`}
     >
       {name}
-    </motion.button>
+    </button>
   );
 };
 
 export default Button;
-
