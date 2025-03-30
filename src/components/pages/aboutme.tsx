@@ -1,6 +1,6 @@
 function Aboutme() {
   return (
-    <div className="mt-mt-2020">
+    <div className="mt-20">
       {/* <h1 className="text-4xl sm:text-6xl font-bold text-center text-white m-8 sm:m-8 font-serif">
         About Me
       </h1> */}
