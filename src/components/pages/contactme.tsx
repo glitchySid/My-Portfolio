@@ -1,6 +1,6 @@
 function ContactMe() {
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-10">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl text-white font-bold text-center mb-8">
           Let's Connect! <div className="motion-preset-seesaw">👋</div>

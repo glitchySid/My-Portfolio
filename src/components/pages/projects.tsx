@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Projects() {
   return (
     <motion.div
-      className="container mx-auto p-4"
+      className="container mx-auto p-4 mt-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

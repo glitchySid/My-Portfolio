@@ -1,6 +1,6 @@
 function Aboutme() {
   return (
-    <div>
+    <div className="mt-mt-2020">
       {/* <h1 className="text-4xl sm:text-6xl font-bold text-center text-white m-8 sm:m-8 font-serif">
         About Me
       </h1> */}
@@ -12,7 +12,7 @@ function Aboutme() {
         />
       </div> */}
       {/* <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" /> */}
-      <h2 className="text-white m-10 mt-20 text-lg">
+      <h2 className="text-white mx-10  text-lg">
         Hi 👋, I'm Siddhesh Mhatre, currently studying at Bharati Vidyapeeth DMS
         in India. I'm a passionate Backend Developer and Machine Learning
         enthusiast. I love diving deep into complex systems and building
