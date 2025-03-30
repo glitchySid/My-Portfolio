@@ -4,15 +4,15 @@ function Aboutme() {
       {/* <h1 className="text-4xl sm:text-6xl font-bold text-center text-white m-8 sm:m-8 font-serif">
         About Me
       </h1> */}
-      <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" />
-      <div className="flex justify-center">
+      {/* <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" /> */}
+      {/* <div className="flex justify-center">
         <img
           src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&width=435&lines=Machine+Learning+Enthusiast;Deep+Learning+Developer;Open+Source+Contributor;Always+Learning+New+Things"
           className="flex justify-center"
         />
-      </div>
-      <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" />
-      <h2 className="text-white m-10 text-lg">
+      </div> */}
+      {/* <hr className="w-auto h-1 mx-auto my-4 bg-gray-100 border-0 rounded-full md:my-10 dark:bg-gray-700" /> */}
+      <h2 className="text-white m-10 mt-20 text-lg">
         Hi 👋, I'm Siddhesh Mhatre, currently studying at Bharati Vidyapeeth DMS
         in India. I'm a passionate Backend Developer and Machine Learning
         enthusiast. I love diving deep into complex systems and building
@@ -44,7 +44,7 @@ function Aboutme() {
         <br />
         🚀 Deployment: Vercel
         <br />
-        📦 Runtime: Node.js
+        📦 Runtime: Node.js, Deno, Bun
       </p>
     </div>
   );

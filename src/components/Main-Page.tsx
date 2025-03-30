@@ -11,7 +11,7 @@ function MainPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="flex sm:flex-row gap-2 mb-4 backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 rounded-full p-1 h-12 shadow-lg">
+      <div className="fixed top-3 left-10 right-10 z-50 flex sm:flex-row gap-2 mb-10 backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 rounded-full p-1 h-12 shadow-lg">
         <Button
           name="About"
           lable="aboutme"
