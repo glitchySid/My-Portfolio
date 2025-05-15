@@ -58,7 +58,7 @@ const ContentViewer: React.FC = () => {
       {/* Mobile sidebar toggle button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="md:hidden fixed top-15 left-1/2 transform -translate-x-1/2 z-50 text-white text-3xl p-2 rounded-md backdrop-blur-sm"
+        className="md:hidden fixed top-13 left-1/2 transform -translate-x-1/2 z-50 text-white text-3xl p-2 rounded-md backdrop-blur-sm"
         aria-label="Toggle sidebar"
       >
         {sidebarOpen ? "✕" : "≡"}
@@ -68,7 +68,7 @@ const ContentViewer: React.FC = () => {
       <div
         className={`w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 fixed md:static inset-0 z-10 transform transition-transform duration-300 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
-        } md:h-full flex flex-col`}
+        } md:h-full flex flex-col backdrop-blur-md`}
       >
         <div className="p-4 flex-shrink-0">
           <h2 className="mt-40 sm:mt-10 text-xl text-white font-bold mb-4 ">
