@@ -24,7 +24,7 @@ function Aboutme() {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <h2 className="text-white m-5 text-3xl">Languages And Frameworks</h2>
       <p className="text-white m-5 text-lg flex flex-col gap-10 font-mono pl-8">
-        🦀 Rust: Actix web, Axum, SQLx
+        {"> 🦀 Rust: Actix web, Axum, SQLx"}
         <br />
         🐍 Python: Flask, TensorFlow, NumPy, Pandas, Polars, PyTorch
         <br />

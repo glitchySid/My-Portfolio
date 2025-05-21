@@ -25,5 +25,11 @@ const projects: {
     content:
       "This is My portfolio website that you are seeing now, it is made using typescript, react and tailwind. for the animations i used tailwindcss-motion",
   },
+  {
+    title: "Markdown2Json",
+    anchor: "https://github.com/glitchySid/Markdown2ApiBody.git",
+    img: "https://github-readme-stats.vercel.app/api/pin/?username=glitchySid&repo=Markdown2ApiBody&theme=radical&border_color=242424&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=242424",
+    content: "This project adds '\n'to every new line of the text corpus. This is especially usefull for storing the text corpus in a json structure. "
+  },
 ];
 export { projects };

@@ -58,7 +58,7 @@ const ContentViewer: React.FC = () => {
       {/* Mobile sidebar toggle button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="md:hidden fixed top-13 left-1/2 transform -translate-x-1/2 z-50 text-white text-3xl p-2 rounded-md backdrop-blur-sm"
+        className="md:hidden fixed top-13 left-2/5 transform -translate-x-1/2 z-50 text-white text-3xl p-2 rounded-md backdrop-blur-sm"
         aria-label="Toggle sidebar"
       >
         {sidebarOpen ? "✕" : "≡"}
