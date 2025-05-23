@@ -34,7 +34,8 @@ const TechStack = () => {
             <li className="flex items-center gap-2">
               <img src={javascript} alt="JavaScript" className="h-6 w-6" />
               <span>
-                <span className="font-semibold">JavaScript</span>: React
+                <span className="font-semibold">JavaScript</span>: ReactJs,
+                SolidJs
               </span>
             </li>
           </ul>
@@ -43,7 +44,7 @@ const TechStack = () => {
 
       {/* Dev Tools Card */}
       <div
-        className="relative p-4 md:p-6 rounded-xl shadow-lg overflow-hidden border border-gray-100 border-opacity-40 max-w-md w-full md:w-1/2 bg-cover bg-center"
+        className="relative p-4 md:p-6 rounded-xl shadow-lg overflow-hidden border border-gray-100 border-opacity-20 max-w-md w-full md:w-1/2 bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-filter backdrop-blur-md"></div>
@@ -51,19 +52,32 @@ const TechStack = () => {
           <h2 className="text-white text-2xl md:text-3xl mb-5">Dev Tools</h2>
           <ul className="text-white text-sm md:text-lg flex flex-col gap-4 font-mono pl-4">
             <li className="flex items-center gap-2">
-              <span>IDE/Editors: VSCode, Neovim, Zed Editor</span>
+              <span>
+                <span className="font-semibold">IDE/Editors</span>: VSCode,
+                Neovim, Zed Editor
+              </span>
             </li>
             <li className="flex items-center gap-2">
-              <span>Version Control: Git, GitHub</span>
+              <span>
+                <span className="font-semibold">Version Control</span>: Git,
+                GitHub
+              </span>
             </li>
             <li className="flex items-center gap-2">
-              <span>Containerization: Docker</span>
+              <span>
+                <span className="font-semibold">Containerization</span>: Docker
+              </span>
             </li>
             <li className="flex items-center gap-2">
-              <span>Deployment: Vercel</span>
+              <span>
+                <span className="font-semibold">Deployment</span>: Vercel
+              </span>
             </li>
             <li className="flex items-center gap-2">
-              <span>Runtime: Node.js, Deno, Bun</span>
+              <span>
+                <span className="font-semibold">Runtime</span>: Node.js, Deno,
+                Bun
+              </span>
             </li>
           </ul>
         </div>
