@@ -14,7 +14,6 @@ function ContactMe() {
               and opportunities.
             </p>
             <p className="mb-2">📍 Location: New Mumbai, India</p>
-            <p className="mb-2">📱 Phone: (+91) 8976261261</p>
             <p>✉️ Email: siddheshmhatrecodes1808@gmail.com</p>
           </div>
 
