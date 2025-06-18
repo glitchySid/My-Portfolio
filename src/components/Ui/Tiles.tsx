@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Markdown from "react-markdown";
+import { useQuery } from '@tanstack/react-query';
 
+// Define the type for a single blog post
 interface ContentItem {
   id: number;
   title: string;
@@ -9,34 +11,39 @@ interface ContentItem {
 
 const apiUrl: string = "https://portfolioblogs-lqof.shuttle.app/api/posts";
 
+// 1. Create an async function to fetch the data.
+// useQuery will handle the try/catch block for us.
+const fetchPosts = async (): Promise<ContentItem[]> => {
+  const response = await fetch(apiUrl);
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return response.json();
+};
+
 const ContentViewer: React.FC = () => {
-  const [items, setItems] = useState<ContentItem[]>([]);
+  // UI state remains managed by useState
   const [selectedItem, setSelectedItem] = useState<ContentItem | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
+  // 2. Use the useQuery hook to fetch and manage server state
+  const { 
+    data: items,        // The fetched data, renamed to 'items' for consistency
+    isLoading,         // True while the request is in flight
+    isError,           // True if the request fails
+    error              // The error object if isError is true
+  } = useQuery<ContentItem[], Error>({
+    queryKey: ['posts'], // A unique key for this query
+    queryFn: fetchPosts, // The function to fetch the data
+  });
+
+  // 3. Set the default selected item once the data is loaded
   useEffect(() => {
-    // Replace with your actual API endpoint
-    fetch(apiUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setItems(data);
-        if (data.length > 0) {
-          setSelectedItem(data[0]); // Select first item by default
-        }
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
+    // If there is data and no item is currently selected, select the first one.
+    if (items && items.length > 0 && !selectedItem) {
+      setSelectedItem(items[0]);
+    }
+  }, [items, selectedItem]); // This effect runs when 'items' data arrives
 
   // Close sidebar when item is selected on mobile
   const handleItemSelect = (item: ContentItem) => {
@@ -45,13 +52,22 @@ const ContentViewer: React.FC = () => {
       setSidebarOpen(false);
     }
   };
-
-  if (loading)
+  
+  // 4. Use isLoading and isError for conditional rendering
+  if (isLoading) {
     return (
       <div className="flex justify-center items-center h-full">Loading...</div>
     );
-  if (error) return <div className="text-red-500 p-4">Error: {error}</div>;
-  if (items.length === 0) return <div className="p-4">No items found.</div>;
+  }
+
+  if (isError) {
+    return <div className="text-red-500 p-4">Error: {error.message}</div>;
+  }
+  
+  // The check for empty items can now safely happen after loading/error states
+  if (!items || items.length === 0) {
+    return <div className="p-4">No items found.</div>;
+  }
 
   return (
     <div className="flex flex-col md:flex-row h-full w-full relative">
